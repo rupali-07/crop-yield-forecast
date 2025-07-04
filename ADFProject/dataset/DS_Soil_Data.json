@@ -1,0 +1,44 @@
+{
+	"name": "DS_Soil_Data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Agri_Data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "soil_data.csv",
+				"container": "agri-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "Soil_pH",
+				"type": "String"
+			},
+			{
+				"name": "Nitrogen",
+				"type": "String"
+			},
+			{
+				"name": "Phosphorus",
+				"type": "String"
+			},
+			{
+				"name": "Potassium",
+				"type": "String"
+			}
+		]
+	}
+}
