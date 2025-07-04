@@ -1,9 +1,0 @@
-{
-	"name": "RestResource1",
-	"properties": {
-		"annotations": [],
-		"type": "RestResource",
-		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
-}
