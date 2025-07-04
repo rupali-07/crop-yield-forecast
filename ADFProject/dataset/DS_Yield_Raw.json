@@ -1,0 +1,44 @@
+{
+	"name": "DS_Yield_Raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Agri_Data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "crop_yield.csv",
+				"container": "agri-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "Crop",
+				"type": "String"
+			},
+			{
+				"name": "Season",
+				"type": "String"
+			},
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Yield_kg_per_ha",
+				"type": "String"
+			}
+		]
+	}
+}
