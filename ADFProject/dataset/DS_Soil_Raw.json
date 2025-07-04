@@ -1,5 +1,5 @@
 {
-	"name": "DS_Soil_Data",
+	"name": "DS_Soil_Raw",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_Blob_Agri_Data",
