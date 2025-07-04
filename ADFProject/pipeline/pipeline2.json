@@ -39,12 +39,6 @@
 						"referenceName": "RestResource1",
 						"type": "DatasetReference"
 					}
-				],
-				"outputs": [
-					{
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
-					}
 				]
 			}
 		],
