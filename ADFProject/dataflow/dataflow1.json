@@ -5,33 +5,17 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "StgCustomer",
-						"type": "DatasetReference"
-					},
 					"name": "stagingcustomer"
 				},
 				{
-					"dataset": {
-						"referenceName": "DimCustomer",
-						"type": "DatasetReference"
-					},
 					"name": "Dimensioncustomer"
 				}
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "DimCustomer",
-						"type": "DatasetReference"
-					},
 					"name": "sink1"
 				},
 				{
-					"dataset": {
-						"referenceName": "DimCustomer",
-						"type": "DatasetReference"
-					},
 					"name": "sink2"
 				}
 			],
@@ -56,9 +40,7 @@
 				"          Designation as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> stagingcustomer",
+				"     validateSchema: false) ~> stagingcustomer",
 				"source(output(",
 				"          Customer_Key as integer,",
 				"          CustomerID as integer,",
@@ -68,9 +50,7 @@
 				"          Designation as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> Dimensioncustomer",
+				"     validateSchema: false) ~> Dimensioncustomer",
 				"stagingcustomer, Dimensioncustomer exists(stagingcustomer@CustomerID == Dimensioncustomer@CustomerID,",
 				"     negate:true,",
 				"     broadcast: 'auto')~> exists1",
@@ -80,56 +60,28 @@
 				"exists2 alterRow(updateIf(1==1)) ~> alterRow1",
 				"exists1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          Customer_Key as integer,",
-				"          CustomerID as integer,",
-				"          CustomerName as string,",
-				"          City as string,",
-				"          Salary as float,",
-				"          Designation as string",
-				"     ),",
-				"     deletable:false,",
-				"     insertable:true,",
-				"     updateable:false,",
-				"     upsertable:false,",
-				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          CustomerID,",
 				"          CustomerName,",
 				"          City,",
 				"          Salary,",
 				"          Designation",
-				"     )) ~> sink1",
+				"     ),",
+				"     format: 'table') ~> sink1",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          Customer_Key as integer,",
-				"          CustomerID as integer,",
-				"          CustomerName as string,",
-				"          City as string,",
-				"          Salary as float,",
-				"          Designation as string",
-				"     ),",
-				"     deletable:false,",
-				"     insertable:false,",
-				"     updateable:true,",
-				"     upsertable:false,",
-				"     keys:['CustomerID'],",
-				"     skipKeyWrites:true,",
-				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          CustomerID,",
 				"          CustomerName,",
 				"          City,",
 				"          Salary,",
 				"          Designation",
-				"     )) ~> sink2"
+				"     ),",
+				"     format: 'table') ~> sink2"
 			]
 		}
 	}
