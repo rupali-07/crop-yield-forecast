@@ -1,0 +1,10 @@
+{
+	"name": "AzureMySql427",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/658e09a5-4f3e-4967-b3a6-646522655db5/resourceGroups/Netflix-DF/providers/Microsoft.DBforMySQL/flexibleServers/flexibleserver",
+		"groupId": "mysqlServer",
+		"fqdns": [
+			"flexibleserver.mysql.database.azure.com"
+		]
+	}
+}

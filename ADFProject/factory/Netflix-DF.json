@@ -1,0 +1,14 @@
+{
+	"name": "Netflix-DF",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1b4eaac8-7936-42c1-933f-2072d4b252fe",
+		"tenantId": "3329ad87-4bf5-46aa-bbbd-f439563df228"
+	}
+}

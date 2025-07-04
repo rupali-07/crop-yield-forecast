@@ -1,0 +1,45 @@
+{
+	"name": "SCD_Sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Customer_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerName",
+				"type": "text"
+			},
+			{
+				"name": "City",
+				"type": "text"
+			},
+			{
+				"name": "Salary",
+				"type": "real",
+				"precision": 7
+			},
+			{
+				"name": "Designation",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Dim_customer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,13 @@
+{
+	"name": "RestService1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://management.azure.com/providers/Microsoft.Billing/billingAccounts/658e09a5-4f3e-4967-b3a6-646522655db5/billingProfiles/Netflix-DF/availableBalances?api-version=2018-11-01-preview  ",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
