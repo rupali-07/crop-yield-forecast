@@ -2,10 +2,6 @@
 	"name": "DS_GitH",
 	"properties": {
 		"description": "Dynamic dataset to get data from git\n",
-		"linkedServiceName": {
-			"referenceName": "GIT_DF",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"file_name": {
 				"type": "string"

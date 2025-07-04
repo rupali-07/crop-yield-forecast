@@ -1,10 +1,6 @@
 {
 	"name": "SCD_Sink",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
