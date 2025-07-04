@@ -1,0 +1,44 @@
+{
+	"name": "DS_Weather_Raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Agri_Data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "weather_data.csv",
+				"container": "agri-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "Rainfall_mm",
+				"type": "String"
+			},
+			{
+				"name": "Temperature_C",
+				"type": "String"
+			},
+			{
+				"name": "Humidity_percent",
+				"type": "String"
+			}
+		]
+	}
+}
