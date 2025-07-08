@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Netflix-DF"
+		},
+		"AzureDataLakeStorage_forcropyeild_sasUri": {
+			"value": ""
+		},
+		"LS_Blob_Agri_Data_sasUri": {
+			"value": ""
+		},
+		"AzureMySql427_properties_privateLinkResourceId": {
+			"value": "/subscriptions/658e09a5-4f3e-4967-b3a6-646522655db5/resourceGroups/Netflix-DF/providers/Microsoft.DBforMySQL/flexibleServers/flexibleserver"
+		},
+		"AzureMySql427_properties_groupId": {
+			"value": "mysqlServer"
+		},
+		"AzureMySql427_properties_fqdns": {
+			"value": [
+				"flexibleserver.mysql.database.azure.com"
+			]
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
