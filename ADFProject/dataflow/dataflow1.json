@@ -35,7 +35,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine') ~> source1",
+				"     documentForm: 'singleDocument') ~> source1",
 				"source1 derive(address = concat(\r",
 				"  '{\\\"street\\\":\\\"', address.street,\r",
 				"  '\\\",\\\"city\\\":\\\"', address.city,\r",
