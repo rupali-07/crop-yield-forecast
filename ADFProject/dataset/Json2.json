@@ -1,0 +1,72 @@
+{
+	"name": "Json2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Agri_Data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "test"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"PostedSince": {
+					"type": "string"
+				},
+				"ParentLeaseGroupID": {
+					"type": "string"
+				},
+				"Transactions": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"ParentLeaseGroupID": {
+								"type": "string"
+							},
+							"TransactionID": {
+								"type": "string"
+							},
+							"Date": {
+								"type": "string"
+							},
+							"Type": {
+								"type": "string"
+							},
+							"TransactionCategory": {
+								"type": "string"
+							},
+							"Description": {
+								"type": "string"
+							},
+							"Amount": {
+								"type": "integer"
+							},
+							"ReferenceNumber": {
+								"type": "null"
+							}
+						}
+					}
+				},
+				"MethodName": {
+					"type": "string"
+				},
+				"Status": {
+					"type": "string"
+				},
+				"AccountID": {
+					"type": "integer"
+				},
+				"PropertyID": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
