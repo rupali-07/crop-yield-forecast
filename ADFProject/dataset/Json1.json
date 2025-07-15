@@ -2,16 +2,16 @@
 	"name": "Json1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_Blob_Agri_Data",
+			"referenceName": "AzureDataLakeStorage_forcropyeild",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
+				"type": "AzureBlobFSLocation",
 				"fileName": "sample_nested.json",
-				"container": "test"
+				"fileSystem": "test"
 			}
 		},
 		"schema": {
